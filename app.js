@@ -114,6 +114,16 @@ app.post("/contact" ,async (req,res)=>{
     
     
 })
+app.get("/f" ,async (req,res)=>{
+  
+      
+            const portf = await PortfolioModel.find();
+         
+            res.status(201).send(portf)
+       
+    
+    
+})
 
 app.listen(port,()=>{
     console.log(`my app is running on port:${port}`)
